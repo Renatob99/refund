@@ -8,6 +8,7 @@ const category = document.getElementById("category")
 const expenseList = document.querySelector("ul")
 const expenseQuantity = document.querySelector("aside header p span")
 const expensesTotal = document.querySelector("aside header h2")
+
 // Captura o evento de input para formatar o valor
 amount.oninput = () => {
     //Obtém o valor atual do input e remove os caracters não numericos
@@ -21,6 +22,8 @@ amount.oninput = () => {
     
 
 }
+
+//Transforma o valor de um variavel em BRL
 function formatCurrencyBRL(value){
     //Formata o valor no padrão BRL (Real Brasileiro)
     value = value.toLocaleString("pt-BR", {
@@ -167,6 +170,7 @@ expenseList.addEventListener("click", function (event){
   updateTotals()
 })
 
+//Função para limpar os inputs
 function formClear(){
     //limpa os inputs
     expense.value = ""
